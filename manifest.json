@@ -1,0 +1,19 @@
+{
+	"manifest_version" : 3,
+	"name": "Remove Twitter Views",
+	"description": "Remove the Views'button from Twitter",
+	"version": "1.0.0",
+	"author" : "Kabaj",
+	"content_scripts": [
+		{
+			"matches": ["*://twitter.com/*"],
+			"js":["./scripts/content.js"]
+		}
+	],
+	"icons": {
+			"16": "images/icon.png",
+			"32": "images/icon.png",
+			"64": "images/icon.png",
+			"128": "images/icon.png"
+		}
+}
