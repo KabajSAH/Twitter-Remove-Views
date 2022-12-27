@@ -23,10 +23,13 @@ function deleteBetterViews(){
   const viewCountElements = document.querySelectorAll(Better_SEL);
   if(viewCountElements){
     viewCountElements.forEach(e => {
-      if(e.dataset.testid !== 'analyticsButton'){
+      if(e.dataset.testid !== 'analyticsButton'&& e.dataset.testid !== 'analytics'){
         let elem = e;
-        while(!elem.nextSibling){
+        console.log(elem);
+        console.log(!(elem.nextSibling || elem.previousSibling))
+        while(!(elem.nextSibling || elem.previousSibling)){
           elem = elem.parentNode;
+          console.log("dedans");
         }
         elem.remove();
       }
